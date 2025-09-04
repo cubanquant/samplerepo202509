@@ -1,12 +1,13 @@
 class Book:
     def __init__(self, author, title):
-        pass
+        self.author = author
 
     def display(self):
-        pass
+        print(f"The book Author is {self.author}")
 
 
 if __name__ == "__main__":
-    a = Book("Thorpe", "Beat the Dealer")
     print("This is assignment 1 part 2")
-    print("this is a sample repository")
+
+    a = Book("Thorpe", "Beat the Dealer")
+    a.display()
