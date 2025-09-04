@@ -8,6 +8,7 @@ class Book:
 
 if __name__ == "__main__":
     print("This is assignment 1 part 2")
+    print("More Changes")
 
     a = Book("Thorpe", "Beat the Dealer")
     a.display()
