@@ -36,7 +36,7 @@ def process_file(log_text):
     for row in csv_data:
         line_counter += 1
 
-        # Part III - Count how many images are in the file (you should use regular Expressions)
+        # Part III - Count how many images are in the file .png, .jpg, .jpeg, .gif (you should use regular Expressions)
         path_to_file = row[0]
         date_access = row[1]
         browser = row[2]
@@ -47,12 +47,16 @@ def process_file(log_text):
             gif_counter += 1
 
         # Part IV: Finding Most Popular Browser (User regex as well)
+        # find Firefox, Chrome, MSIE or Safari
         if browser.lower().find("firefox") != -1:
             browser_counter_dict["Firefox"] += 1
         # ...
         # print(row)
 
+    # print average image hits
     print(f"Average PNG hits = {((png_counter + gif_counter) / line_counter) * 100}%")
+
+    # Find out which browser has the biggest counter and print it
     print(f"Firefox browser hits = {browser_counter_dict['Firefox']}")
 
 
